@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">StorageManagement</string>
+    <string name="model">Model</string>
+    <string name="version">Version</string>
+    <string name="total_space">Total Space</string>
+    <string name="free_space">Free Space</string>
+    <string name="total_ram">Total RAM</string>
+    <string name="used_ram">Used RAM</string>
+    <string name="processor">Processor</string>
+</resources>

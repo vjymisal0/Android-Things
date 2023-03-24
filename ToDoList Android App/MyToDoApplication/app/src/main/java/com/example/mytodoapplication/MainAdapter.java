@@ -19,11 +19,11 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 
 public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
-   //initialize variables
+    //initialize variables
 
     private List<MainData> dataList;
     private Activity context;
-    private  RoomDB database;
+    private RoomDB database;
 
     AlertDialog.Builder builder;
 
@@ -41,8 +41,8 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         //intilaize view
-        View view= LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.list_row_main,parent,false);
+        View view = LayoutInflater.from(parent.getContext())
+                .inflate(R.layout.list_row_main, parent, false);
 
 
         return new ViewHolder(view);
@@ -51,9 +51,9 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull MainAdapter.ViewHolder holder, int position) {
         //int main data
-        MainData data=dataList.get(position);
+        MainData data = dataList.get(position);
         //init db
-        database=RoomDB.getInstance(context);
+        database = RoomDB.getInstance(context);
         //set text in textview
         holder.textView.setText(data.getText());
 
@@ -61,7 +61,7 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
             @Override
             public void onClick(View v) {
                 //init main data
-                MainData d=dataList.get(holder.getAdapterPosition());
+                MainData d = dataList.get(holder.getAdapterPosition());
                 //get id
                 int sID = d.getID();
                 //get text
@@ -75,13 +75,13 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
 
                 //init width
 
-                int width= WindowManager.LayoutParams.MATCH_PARENT;
+                int width = WindowManager.LayoutParams.MATCH_PARENT;
                 //int height
 
-                int height=WindowManager.LayoutParams.WRAP_CONTENT;
+                int height = WindowManager.LayoutParams.WRAP_CONTENT;
                 //set layout
 
-                dialog.getWindow().setLayout(width,height);
+                dialog.getWindow().setLayout(width, height);
 
                 //show dialog
 
@@ -89,8 +89,8 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
 
                 //init and assign varable
 
-                EditText editText=dialog.findViewById(R.id.edit_text);
-                Button btUpdate=dialog.findViewById(R.id.bt_update);
+                EditText editText = dialog.findViewById(R.id.edit_text);
+                Button btUpdate = dialog.findViewById(R.id.bt_update);
 
                 //set text on edit text
 
@@ -104,10 +104,10 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
                         dialog.dismiss();
                         //get upate text from edit text
 
-                        String uText=editText.getText().toString().trim();
+                        String uText = editText.getText().toString().trim();
                         //update text in db
 
-                        database.mainDao().upate(sID,uText);
+                        database.mainDao().upate(sID, uText);
                         //notify when data is updated
 
                         dataList.clear();
@@ -119,22 +119,20 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
                 });
 
 
-
-
             }
         });
 
         holder.btDelete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                builder= new AlertDialog.Builder(v.getContext());
+                builder = new AlertDialog.Builder(v.getContext());
                 //Setting message manually and performing action on button click
                 builder.setMessage("Are you sure you want to delete this task?")
                         .setCancelable(false)
                         .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int id) {
 
-                                MainData d=dataList.get(holder.getAdapterPosition());
+                                MainData d = dataList.get(holder.getAdapterPosition());
                                 //delete text from database
 
                                 database.mainDao().delete(d);
@@ -142,7 +140,7 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
                                 int position = holder.getAdapterPosition();
                                 dataList.remove(position);
                                 notifyItemRemoved(position);
-                                notifyItemRangeChanged(position,dataList.size());
+                                notifyItemRangeChanged(position, dataList.size());
                             }
                         })
                         .setNegativeButton("No", new DialogInterface.OnClickListener() {
@@ -171,14 +169,14 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
         //init varivles
 
         TextView textView;
-        ImageView btEdit,btDelete;
+        ImageView btEdit, btDelete;
 
-        public ViewHolder(@NonNull  View itemView) {
+        public ViewHolder(@NonNull View itemView) {
             super(itemView);
             //Assign varable
-            textView=itemView.findViewById(R.id.text_view);
-            btEdit=itemView.findViewById(R.id.bt_edit);
-            btDelete=itemView.findViewById(R.id.bt_delete);
+            textView = itemView.findViewById(R.id.text_view);
+            btEdit = itemView.findViewById(R.id.bt_edit);
+            btDelete = itemView.findViewById(R.id.bt_delete);
 
 
         }

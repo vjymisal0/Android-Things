@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_storage"
+        android:icon="@drawable/ic_storage"
+        android:title="@string/total_space" />
+    <item
+        android:id="@+id/navigation_ram"
+        android:icon="@drawable/ic_ram"
+        android:title="@string/total_ram" />
+    <item
+        android:id="@+id/navigation_processor"
+        android:icon="@drawable/ic_processor"
+        android:title="@string/processor" />
+</menu>

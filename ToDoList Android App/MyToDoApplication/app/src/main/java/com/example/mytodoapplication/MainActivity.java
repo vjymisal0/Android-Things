@@ -17,10 +17,10 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     EditText editText;
-    Button btAdd,btReset;
+    Button btAdd, btReset;
     RecyclerView recyclerView;
 
-    List<MainData> dataList=new ArrayList<>();
+    List<MainData> dataList = new ArrayList<>();
     LinearLayoutManager linearLayoutManager;
     RoomDB database;
 
@@ -34,28 +34,28 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        editText=findViewById(R.id.edit_text);
-        btAdd=findViewById(R.id.bt_add);
-        btReset=findViewById(R.id.bt_reset);
-        recyclerView=findViewById(R.id.recycler_view);
+        editText = findViewById(R.id.edit_text);
+        btAdd = findViewById(R.id.bt_add);
+        btReset = findViewById(R.id.bt_reset);
+        recyclerView = findViewById(R.id.recycler_view);
 
         //init database
 
-        database=RoomDB.getInstance(this);
+        database = RoomDB.getInstance(this);
         //store db value in datalist
 
-        dataList=database.mainDao().getAll();
+        dataList = database.mainDao().getAll();
 
         //init linear layout manager
 
-        linearLayoutManager =new LinearLayoutManager(this);
+        linearLayoutManager = new LinearLayoutManager(this);
 
         //set layout manager
 
         recyclerView.setLayoutManager(linearLayoutManager);
         //init adapter
 
-        mainAdapter=new MainAdapter(dataList,MainActivity.this);
+        mainAdapter = new MainAdapter(dataList, MainActivity.this);
         //set adapter
 
         recyclerView.setAdapter(mainAdapter);
@@ -65,11 +65,11 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 //get string from edit text
 
-                String sText=editText.getText().toString().trim();
-                if(!sText.equals("")){
+                String sText = editText.getText().toString().trim();
+                if (!sText.equals("")) {
                     //when text is null
                     //init main data
-                    MainData data=new MainData();
+                    MainData data = new MainData();
                     //set text on main data
                     data.setText(sText);
                     //insert text in databse
@@ -81,13 +81,13 @@ public class MainActivity extends AppCompatActivity {
                     //notify when data is inserted
 
                     dataList.clear();
-                    Toast.makeText(MainActivity.this,"Successfully added!",Toast.LENGTH_LONG).show();
+                    Toast.makeText(MainActivity.this, "Successfully added!", Toast.LENGTH_LONG).show();
 
                     dataList.addAll(database.mainDao().getAll());
                     mainAdapter.notifyDataSetChanged();
 
-                }else{
-                    builder= new AlertDialog.Builder(MainActivity.this);
+                } else {
+                    builder = new AlertDialog.Builder(MainActivity.this);
                     //Setting message manually and performing action on button click
                     builder.setMessage("The text field must not be empty!!")
                             .setCancelable(false)
@@ -105,36 +105,36 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         btReset.setOnClickListener(new View.OnClickListener() {
-           @Override
-           public void onClick(View v) {
-               builder= new AlertDialog.Builder(v.getContext());
-               //Setting message manually and performing action on button click
-               builder.setMessage("Are you sure you want to delete all your todos?")
-                       .setCancelable(false)
-                       .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-                           public void onClick(DialogInterface dialog, int id) {
+            @Override
+            public void onClick(View v) {
+                builder = new AlertDialog.Builder(v.getContext());
+                //Setting message manually and performing action on button click
+                builder.setMessage("Are you sure you want to delete all your todos?")
+                        .setCancelable(false)
+                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
 
-                               //delete all data from database
-                               database.mainDao().reset(dataList);
-                               //notify when all data deteled
-                               dataList.clear();
-                               dataList.addAll(database.mainDao().getAll());
-                               mainAdapter.notifyDataSetChanged();
-                           }
-                       })
-                       .setNegativeButton("No", new DialogInterface.OnClickListener() {
-                           public void onClick(DialogInterface dialog, int id) {
-                               //  Action for 'NO' Button
-                               dialog.cancel();
-                           }
-                       });
-               //Creating dialog box
-               AlertDialog alert = builder.create();
-               //Setting the title manually
-               alert.setTitle("ResetConfirmation");
-               alert.show();
+                                //delete all data from database
+                                database.mainDao().reset(dataList);
+                                //notify when all data deteled
+                                dataList.clear();
+                                dataList.addAll(database.mainDao().getAll());
+                                mainAdapter.notifyDataSetChanged();
+                            }
+                        })
+                        .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                //  Action for 'NO' Button
+                                dialog.cancel();
+                            }
+                        });
+                //Creating dialog box
+                AlertDialog alert = builder.create();
+                //Setting the title manually
+                alert.setTitle("ResetConfirmation");
+                alert.show();
 
-           }
+            }
         });
     }
 }
