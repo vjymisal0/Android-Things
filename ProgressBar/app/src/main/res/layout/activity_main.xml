@@ -7,15 +7,15 @@
     tools:context=".MainActivity">
 
 
-<!--    <ProgressBar-->
-<!--        android:id="@+id/progressBar_cyclic"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content" />-->
-
-    <Button
-        android:id="@+id/button"
+    <ProgressBar
+        android:id="@+id/progressBar_cyclic"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="download"
-        android:text="DOWNLOAD FILE" />
+        android:layout_height="wrap_content" />
+
+<!--    <Button-->
+<!--        android:id="@+id/button"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:onClick="download"-->
+<!--        android:text="DOWNLOAD FILE" />-->
 </RelativeLayout>

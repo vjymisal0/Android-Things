@@ -1,7 +1,7 @@
 package com.vijayapps.p14e4;
 
 import android.os.Bundle;
-import android.text.method.ScrollingMovementMethod; // Import statement for ScrollingMovementMethod
+import android.text.method.ScrollingMovementMethod;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
