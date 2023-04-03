@@ -3,7 +3,6 @@ package com.vijayapps.p15e1;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.Toast;
@@ -31,17 +30,17 @@ public class MainActivity extends AppCompatActivity {
             result.append("Selected Items:");
 
             if (pizza.isChecked()) {
-                result.append("\nPizza 100Rs");
+                result.append("Pizza 100Rs");
                 totalamount += 100;
             }
 
             if (coffee.isChecked()) {
-                result.append("\nCoffe 50Rs");
+                result.append("Coffe 50Rs");
                 totalamount += 50;
             }
 
             if (burger.isChecked()) {
-                result.append("\nBurger 120Rs");
+                result.append("Burger 120Rs");
                 totalamount += 120;
             }
 
