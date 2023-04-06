@@ -22,13 +22,11 @@ public class MainActivity extends AppCompatActivity {
         urlEditText = findViewById(R.id.urlEditText);
         navigateButton = findViewById(R.id.navigateButton);
 
-        navigateButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String url = urlEditText.getText().toString();
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
-                startActivity(intent);
-            }
+        navigateButton.setOnClickListener(v -> {
+            String url = urlEditText.getText().toString();
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+            startActivity(intent);
+
         });
     }
 }
