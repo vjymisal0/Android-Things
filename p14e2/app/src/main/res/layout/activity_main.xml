@@ -14,6 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_x="135dp"
         android:layout_y="427dp"
+        android:backgroundTintMode="src_over"
         android:text="Change Image" />
 
     <ImageView

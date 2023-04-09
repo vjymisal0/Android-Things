@@ -1,21 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
+    android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <EditText
-        android:id="@+id/numberInput"
-        android:layout_width="match_parent"
+        android:id="@+id/number_input"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="Enter a number" />
 
     <Button
-        android:id="@+id/factorialButton"
-        android:layout_width="match_parent"
+        android:id="@+id/factorial_button"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
         android:text="Factorial" />
 
 </LinearLayout>

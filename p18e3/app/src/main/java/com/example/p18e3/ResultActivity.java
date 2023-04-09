@@ -1,26 +1,36 @@
 package com.example.p18e3;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 public class ResultActivity extends AppCompatActivity {
 
-    private TextView resultText;
+    TextView factorialOutput;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
 
-        resultText = findViewById(R.id.resultText);
+        factorialOutput = findViewById(R.id.factorial_output);
 
-        Intent intent = getIntent();
-        int factorial = intent.getIntExtra(" factorial", 0);
-        resultText.setText("Factorial: " + factorial);
-
-
+        int number = getIntent().getIntExtra("number", 0);
+//        long factorial = calculateFactorial(number);
+        long factorial = 1;
+        for (int i = 1; i <= number; i++) {
+            factorial *= i;
+        }
+        factorialOutput.setText("Factorial of " + number + " is " + factorial);
     }
+
+//    private long calculateFactorial(int number) {
+//        long factorial = 1;
+//        for (int i = 1; i <= number; i++) {
+//            factorial *= i;
+//        }
+//        return factorial;
+//    }
 }
+

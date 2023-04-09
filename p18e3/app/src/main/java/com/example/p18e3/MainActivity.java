@@ -1,50 +1,71 @@
 package com.example.p18e3;
 
-import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    private EditText numberInput;
-    private Button factorialButton;
+    EditText numberInput;
+    Button factorialButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        numberInput = findViewById(R.id.numberInput);
-        factorialButton = findViewById(R.id.factorialButton);
+        numberInput = findViewById(R.id.number_input);
+        factorialButton = findViewById(R.id.factorial_button);
 
-        factorialButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String input = numberInput.getText().toString().trim();
-                if (input.isEmpty()) {
-                    Toast.makeText(MainActivity.this, "Please enter a number", Toast.LENGTH_SHORT).show();
-                    return;
-                }
-                int number = Integer.parseInt(input);
-                int factorial = calculateFactorial(number);
+        factorialButton.setOnClickListener(v -> {
+            int number = Integer.parseInt(numberInput.getText().toString());
+            Intent intent = new Intent(MainActivity.this, ResultActivity.class);
+            intent.putExtra("number", number);
+            startActivity(intent);
 
-                Intent intent = new Intent(MainActivity.this, ResultActivity.class);
-                intent.putExtra("factorial", factorial);
-                startActivity(intent);
-            }
         });
+    }
+
+    protected void onStart() {
+        super.onStart();
+        Log.d("onStart()", "onStart() called");
 
     }
 
-    private int calculateFactorial(int number) {
-        int result = 1;
-        for (int i = 2; i <= number; i++) {
-            result *= i;
-        }
-        return result;
+    protected void onResume() {
+        super.onResume();
+        Log.d("onResume()", "onResume() called");
+
     }
+
+    protected void onPause() {
+        super.onPause();
+        Log.d("onPause()", "onPause() called");
+
+    }
+
+    protected void onStop() {
+        super.onStop();
+        Log.d("onStop()", "onStop() called");
+
+    }
+
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.d("onDestroy()", "onDestroy() called");
+
+    }
+
+    protected void onRestart() {
+        super.onRestart();
+        Log.d("onRestart()", "onRestart() called");
+
+    }
+
+
 }
