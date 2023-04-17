@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/t1"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:layout_x="170dp"
+        android:layout_y="261dp"
+        android:textSize="25dp" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="203dp"
+        android:layout_height="243dp"
+        android:layout_gravity="center"
+        android:layout_x="100dp"
+        android:layout_y="160dp"
+        android:indeterminateOnly="false"
+        android:progressDrawable="@drawable/custom_progressbar" />
+
+
+</AbsoluteLayout>

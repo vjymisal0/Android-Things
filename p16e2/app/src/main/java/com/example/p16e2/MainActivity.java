@@ -10,14 +10,26 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TimePicker;
 
+import java.util.Calendar;
+
 public class MainActivity extends AppCompatActivity {
 
     Button timeBtn, dateBtn;
     EditText editTime, editDate;
+    Calendar c;
+    int year, month, day;
+    int hour, minute;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        c = Calendar.getInstance();
+        month = c.get(Calendar.MONTH);
+        year = c.get(Calendar.YEAR);
+        day = c.get(Calendar.DAY_OF_MONTH);
+        hour = c.get(Calendar.HOUR_OF_DAY);
+        minute = c.get(Calendar.MINUTE);
+
         setContentView(R.layout.activity_main);
         timeBtn = findViewById(R.id.btn_time);
         dateBtn = findViewById(R.id.btn_date);
@@ -40,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
                 editDate.setText(showDate);
             }
 
-        }, 23, 4, 27);
+        }, year, month, day);
         d.show();
     }
 
@@ -51,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
                 String showTime = i + ":" + i1;
                 editTime.setText(showTime);
             }
-        }, 2, 44, true);
+        }, hour, minute, false);
         tp.show();
     }
 }

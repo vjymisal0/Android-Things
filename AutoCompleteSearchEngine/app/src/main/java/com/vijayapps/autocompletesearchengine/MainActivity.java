@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
         mSearchButton = findViewById(R.id.search_button);
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line, SEARCH_SUGGESTIONS);
+        
         mSearchBox.setAdapter(adapter);
 
         mSearchButton.setOnClickListener(v -> {
