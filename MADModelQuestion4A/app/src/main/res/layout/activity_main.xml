@@ -1,0 +1,39 @@
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="110px"
+        android:layout_y="110px"
+        android:text="User Name" />
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_x="250px"
+        android:layout_y="80px"
+        android:width="100px" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="110px"
+        android:layout_y="200px"
+        android:text="Password" />
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_x="250px"
+        android:layout_y="150px"
+        android:width="100px" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="300px"
+        android:layout_y="300px"
+        android:text="Log In" />
+</AbsoluteLayout>
