@@ -37,4 +37,5 @@ public class MainActivity extends AppCompatActivity {
         for (Contact contact : contacts)
             result.append(contact.getId() + ". " + contact.getName() + " (" + contact.getPhone() + ")\n");
     }
+
 }
