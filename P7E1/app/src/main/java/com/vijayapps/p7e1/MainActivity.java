@@ -12,24 +12,30 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button button;
-    private EditText editText;
-
+    EditText etUsername, etPassword;
+    Button btnLogin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        button = findViewById(R.id.button);
-        editText = findViewById(R.id.editText);
-        button.setOnClickListener(new View.OnClickListener() {
+        etUsername = findViewById(R.id.etUsername);
+        etPassword = findViewById(R.id.etPassword);
+        btnLogin = findViewById(R.id.btnLogin);
+
+        btnLogin.setOnClickListener(new View.OnClickListener() {
+
             @Override
-            public void onClick(View view) {
-                String name = editText.getText().toString();
-                if (name.isEmpty()) {
-                    Toast.makeText(getApplicationContext(), "Please fill in all fields", Toast.LENGTH_SHORT).show();
+            public void onClick(View v) {
+
+                String uname = etUsername.getText().toString();
+                String pwd = etPassword.getText().toString();
+
+                if (uname.equals("admin") && pwd.equals("123")) {
+                    Toast.makeText(getApplicationContext(), "Login Successful", Toast.LENGTH_SHORT).show();
                 } else {
-                    Toast.makeText(MainActivity.this, "Name: " + name, Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), "Login Unsuccessful", Toast.LENGTH_SHORT).show();
                 }
             }
         });

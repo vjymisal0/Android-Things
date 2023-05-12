@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">OOPS DataTypes p6</string>
+    <string name="string_void">array</string>
+    <string name="string_boolean">boolean</string>
+    <string name="string_double">double</string>
+    <string name="string_char">char</string>
+    <string name="string_float">float</string>
+    <string name="string_int">int</string>
+    <string name="string_data_types">Data types in OOPS</string>
+
+</resources>

@@ -10,354 +10,355 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/table_heading"
         android:gravity="center_horizontal"
         android:padding="10dp"
+        android:text="@string/table_heading"
         android:textColor="@android:color/black"
-        android:textStyle="bold"/>
+        android:textStyle="bold" />
 
     <TableRow
         android:id="@+id/headings"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#607D8B"
-        android:padding="5dp" >
+        android:padding="5dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:text="Name"
-            android:layout_weight="1"
-            android:textColor="@android:color/white"/>
+            android:textColor="@android:color/white" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:text="dept"
-            android:layout_weight="1"
-            android:textColor="@android:color/white"/>
+            android:textColor="@android:color/white" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:text="City"
-            android:layout_weight="1"
-            android:textColor="@android:color/white"/>
+            android:textColor="@android:color/white" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:text="Percentage"
+            android:textColor="@android:color/white" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#E7E7EB"
+        android:padding="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:textColor="@android:color/white"/>
-    </TableRow>
-
-    <TableRow
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#E7E7EB"
-        android:padding="5dp" >
+            android:text="@string/s1_name" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/s1_name"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:text="@string/s1_dept" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/s1_dept"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:text="@string/s1_city" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/s1_city"
-            android:layout_weight="1"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/s1_percentage"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:text="@string/s1_percentage" />
     </TableRow>
 
     <TableRow
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#FFFFFF"
-        android:padding="5dp" >
+        android:padding="5dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/s2_name"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:text="@string/s2_name" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/s2_dept"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:text="@string/s2_dept" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/s2_city"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:text="@string/s2_city" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/s2_percentage"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:text="@string/s2_percentage" />
     </TableRow>
 
     <TableRow
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#E7E7EB"
-        android:padding="5dp" >
+        android:padding="5dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/s3_name"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:text="@string/s3_name" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/s3_dept"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:text="@string/s3_dept" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/s3_city"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:text="@string/s3_city" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/s3_percentage"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:text="@string/s3_percentage" />
     </TableRow>
 
     <TableRow
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#FFFFFF"
-        android:padding="5dp" >
+        android:padding="5dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/s4_name"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:text="@string/s4_name" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/s4_dept"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:text="@string/s4_dept" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/s4_city"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:text="@string/s4_city" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/s4_percentage"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:text="@string/s4_percentage" />
     </TableRow>
 
     <TableRow
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#E7E7EB"
-        android:padding="5dp" >
+        android:padding="5dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/s5_name"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:text="@string/s5_name" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/s5_dept"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:text="@string/s5_dept" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/s5_city"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:text="@string/s5_city" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/s5_percentage"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:text="@string/s5_percentage" />
     </TableRow>
 
     <TableRow
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#FFFFFF"
-        android:padding="5dp" >
+        android:padding="5dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/s6_name"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:text="@string/s6_name" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/s6_dept"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:text="@string/s6_dept" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/s6_city"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:text="@string/s6_city" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/s6_percentage"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:text="@string/s6_percentage" />
     </TableRow>
 
     <TableRow
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#E7E7EB"
-        android:padding="5dp" >
+        android:padding="5dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/s7_name"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:text="@string/s7_name" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/s7_dept"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:text="@string/s7_dept" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/s7_city"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:text="@string/s7_city" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/s7_percentage"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:text="@string/s7_percentage" />
     </TableRow>
 
     <TableRow
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#FFFFFF"
-        android:padding="5dp" >
+        android:padding="5dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/s8_name"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:text="@string/s8_name" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/s8_dept"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:text="@string/s8_dept" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/s8_city"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:text="@string/s8_city" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/s8_percentage"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:text="@string/s8_percentage" />
     </TableRow>
 
     <TableRow
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#E7E7EB"
-        android:padding="5dp" >
+        android:padding="5dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/s9_name"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:text="@string/s9_name" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/s9_dept"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:text="@string/s9_dept" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/s9_city"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:text="@string/s9_city" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/s9_percentage"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:text="@string/s9_percentage" />
     </TableRow>
+
     <TableRow
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#FFFFFF"
-        android:padding="5dp" >
+        android:padding="5dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/s10_name"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:text="@string/s10_name" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/s10_dept"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:text="@string/s10_dept" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/s10_city"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:text="@string/s10_city" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/s10_percentage"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:text="@string/s10_percentage" />
     </TableRow>
 </TableLayout>

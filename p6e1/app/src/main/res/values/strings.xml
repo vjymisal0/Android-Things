@@ -16,11 +16,11 @@
         <string name="s3_percentage">90.00</string>
         <string name="s4_name">Santosh</string>
         <string name="s4_dept">COMP</string>
-        <string name="s4_city">Dhule</string>
+        <string name="s4_city">SOLAPUR</string>
         <string name="s4_percentage">79.24</string>
         <string name="s5_name">Girish</string>
-        <string name="s5_dept">E & TC</string>
-        <string name="s5_city">Dhule</string>
+        <string name="s5_dept">ENTC</string>
+        <string name="s5_city">SOLAPUR</string>
         <string name="s5_percentage">84.00</string>
         <string name="s6_name">Aachal</string>
         <string name="s6_dept">MECH</string>
@@ -40,7 +40,7 @@
         <string name="s9_percentage">71.30</string>
         <string name="s10_name">Harish</string>
         <string name="s10_dept">COMP</string>
-        <string name="s10_city">Dhule</string>
+        <string name="s10_city">SOLAPUR</string>
         <string name="s10_percentage">72.47</string>
 
 </resources>
