@@ -26,7 +26,6 @@ public class MainActivity extends AppCompatActivity {
             String url = urlEditText.getText().toString();
             Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
             startActivity(intent);
-
         });
     }
 }

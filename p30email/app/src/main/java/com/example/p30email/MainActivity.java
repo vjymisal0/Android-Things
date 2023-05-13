@@ -34,9 +34,6 @@ public class MainActivity extends AppCompatActivity {
             intent.putExtra(Intent.EXTRA_TEXT, emailBody);
             intent.setType("message/rfc822");
             startActivity(Intent.createChooser(intent, "Choose an Email Client:"));
-
         });
-
-
     }
 }

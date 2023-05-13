@@ -31,15 +31,13 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
+        Button dialerButton = findViewById(R.id.b1);
+        dialerButton.setOnClickListener(v -> {
+            Intent intent = new Intent(Intent.ACTION_DIAL);
+            intent.setData(Uri.parse("tel:" + "9172698237"));
+            startActivity(intent);
 
-
-    Button dialerButton = findViewById(R.id.b1);
-        dialerButton.setOnClickListener(v ->{
-        Intent intent = new Intent(Intent.ACTION_DIAL);
-        intent.setData(Uri.parse("tel:"+"9172698237"));
-        startActivity(intent);
-
-    });
-}
+        });
+    }
 
 }
