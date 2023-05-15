@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:a="http://schemas.android.com/apk/res/android"
+    xmlns:t="http://schemas.android.com/tools"
+    a:layout_width="match_parent"
+    a:layout_height="match_parent"
+    a:orientation="vertical"
+    t:context=".MainActivity">
+
+    <TextView
+        a:layout_width="match_parent"
+        a:layout_height="92dp"
+        a:text="Student Registration System"
+        a:textAlignment="center"
+        a:textSize="30sp" />
+
+    <TextView
+        a:id="@+id/textView"
+        a:layout_width="match_parent"
+        a:layout_height="wrap_content"
+        a:text="Enrolment No."
+        a:textSize="30sp" />
+
+    <EditText
+        a:id="@+id/username"
+        a:layout_width="match_parent"
+        a:layout_height="wrap_content"
+        a:ems="10"
+        a:inputType="number"
+        a:textSize="25sp" />
+
+    <TextView
+        a:id="@+id/textView2"
+        a:layout_width="match_parent"
+        a:layout_height="88dp"
+        a:gravity="bottom"
+        a:text="Password"
+        a:textSize="30sp" />
+
+    <EditText
+        a:id="@+id/password"
+        a:layout_width="match_parent"
+        a:layout_height="wrap_content"
+        a:ems="10"
+        a:gravity="left"
+        a:inputType="numberPassword"
+        a:textSize="25sp" />
+
+    <Button
+        a:id="@+id/login"
+        a:layout_width="131dp"
+        a:layout_height="58dp"
+        a:layout_gravity="center_horizontal"
+        a:layout_marginTop="50dp"
+        a:text="LOGIN"
+        a:textSize="20sp" />
+
+</LinearLayout>

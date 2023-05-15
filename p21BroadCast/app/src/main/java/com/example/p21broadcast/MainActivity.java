@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
         filter.addAction(Intent.ACTION_TIME_CHANGED);
         filter.addAction(Intent.ACTION_BOOT_COMPLETED);
         registerReceiver(mReceiver, filter);
+
     }
 
     @Override

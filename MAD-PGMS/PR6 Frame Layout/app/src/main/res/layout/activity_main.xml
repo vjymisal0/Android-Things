@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        tools:srcCompat="@drawable/img"
+        android:contentDescription="Data Types" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:height="80dp"
+        android:background="#2c8c44"
+        android:fontFamily="@font/prompt_bold"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="Data Types in OOP"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="35sp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:height="80dp"
+        android:background="#2c8c44"
+        android:fontFamily="@font/prompt_bold"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="Geeks For Geeks"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="35sp" />
+
+</FrameLayout>

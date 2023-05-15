@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:a="http://schemas.android.com/apk/res/android"
+    a:layout_width="match_parent"
+    a:layout_height="match_parent"
+    a:orientation="vertical">
+
+    <TextView
+        a:layout_width="match_parent"
+        a:layout_height="95dp"
+        a:gravity="center_horizontal|center_vertical"
+        a:text="Menu"
+        a:textColor="#002AFF"
+        a:textSize="30sp" />
+
+    <CheckBox
+        a:id="@+id/cb1"
+        a:layout_width="match_parent"
+        a:layout_height="wrap_content"
+        a:text="Chicken Kabab"
+        a:textSize="25sp" />
+
+    <CheckBox
+        a:id="@+id/cb2"
+        a:layout_width="match_parent"
+        a:layout_height="wrap_content"
+        a:text="Chicken Tikka"
+        a:textSize="25sp" />
+
+    <CheckBox
+        a:id="@+id/cb3"
+        a:layout_width="match_parent"
+        a:layout_height="wrap_content"
+        a:text="Chicken Biryani"
+        a:textSize="25sp" />
+
+    <CheckBox
+        a:id="@+id/cb4"
+        a:layout_width="match_parent"
+        a:layout_height="wrap_content"
+        a:text="Dum Biryani"
+        a:textSize="25sp" />
+
+    <CheckBox
+        a:id="@+id/cb5"
+        a:layout_width="match_parent"
+        a:layout_height="wrap_content"
+        a:text="Butter Chicken"
+        a:textSize="25sp" />
+
+    <Button
+        a:id="@+id/order"
+        a:layout_width="wrap_content"
+        a:layout_height="wrap_content"
+        a:layout_gravity="center_horizontal"
+        a:layout_marginTop="50dp"
+        a:text="ORDER NOW"
+        a:textSize="20sp" />
+
+
+</LinearLayout>

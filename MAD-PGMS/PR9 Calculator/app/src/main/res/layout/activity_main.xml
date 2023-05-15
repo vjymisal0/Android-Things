@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FEEF72"
+    tools:context=".MainActivity"
+    tools:ignore="Deprecated">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="108dp"
+        android:layout_height="wrap_content"
+        android:layout_x="234dp"
+        android:layout_y="114dp"
+        android:fontFamily="@font/quicksand_medium"
+        android:text="Num2"
+        android:textAlignment="center"
+        android:textColor="#420000"
+        android:textColorHighlight="#420000"
+        android:textColorHint="#420000"
+        android:textColorLink="#420000"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="108dp"
+        android:layout_height="wrap_content"
+        android:layout_x="58dp"
+        android:layout_y="114dp"
+        android:fontFamily="@font/quicksand_medium"
+        android:text="Num1"
+        android:textAlignment="center"
+        android:textColor="#420000"
+        android:textColorHighlight="#420000"
+        android:textColorHint="#420000"
+        android:textColorLink="#420000"
+        android:textSize="30sp" />
+
+    <EditText
+        android:id="@+id/num1"
+        android:layout_width="108dp"
+        android:layout_height="86dp"
+        android:layout_x="58dp"
+        android:layout_y="162dp"
+        android:ems="10"
+        android:fontFamily="@font/quicksand_bold"
+        android:inputType="numberSigned"
+        android:textAlignment="center"
+        android:textColor="#420000"
+        android:textColorHighlight="#420000"
+        android:textColorHint="#420000"
+        android:textColorLink="#420000"
+        android:textSize="35sp" />
+
+    <Button
+        android:id="@+id/add"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_x="63dp"
+        android:layout_y="278dp"
+        android:backgroundTint="#7D0000"
+        android:fontFamily="@font/quicksand_bold"
+        android:paddingBottom="20dp"
+        android:text="+"
+        android:textColor="@color/white"
+        android:textSize="50sp"
+        android:onClick="add"/>
+
+    <Button
+        android:id="@+id/sub"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_x="240dp"
+        android:layout_y="278dp"
+        android:backgroundTint="#7D0000"
+        android:fontFamily="@font/quicksand_bold"
+        android:paddingBottom="20dp"
+        android:text="-"
+        android:textColor="@color/white"
+        android:textSize="50sp"
+        android:onClick="sub"/>
+
+    <Button
+        android:id="@+id/mul"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_x="63dp"
+        android:layout_y="412dp"
+        android:backgroundTint="#7D0000"
+        android:fontFamily="@font/quicksand_bold"
+        android:paddingBottom="15dp"
+        android:text="x"
+        android:textColor="@color/white"
+        android:textSize="35sp"
+        android:onClick="mul"/>
+
+    <Button
+        android:id="@+id/div"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_x="240dp"
+        android:layout_y="412dp"
+        android:backgroundTint="#7D0000"
+        android:fontFamily="@font/quicksand_bold"
+        android:paddingBottom="15dp"
+        android:text="/"
+        android:textColor="@color/white"
+        android:textSize="35sp"
+        android:onClick="div"/>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="156dp"
+        android:layout_y="559dp"
+        android:backgroundTint="#FDEE72"
+        android:fontFamily="@font/quicksand_medium"
+        android:text="Result"
+        android:textColor="#420000"
+        android:textColorHighlight="#420000"
+        android:textColorHint="#420000"
+        android:textColorLink="#420000"
+        android:textSize="30sp" />
+
+    <EditText
+        android:id="@+id/num2"
+        android:layout_width="108dp"
+        android:layout_height="86dp"
+        android:layout_x="236dp"
+        android:layout_y="162dp"
+        android:ems="10"
+        android:fontFamily="@font/quicksand_bold"
+        android:inputType="numberSigned"
+        android:textAlignment="center"
+        android:textColor="#420000"
+        android:textColorHighlight="#420000"
+        android:textColorHint="#420000"
+        android:textColorLink="#420000"
+        android:textSize="35sp" />
+
+    <TextView
+        android:id="@+id/res"
+        android:layout_width="263dp"
+        android:layout_height="147dp"
+        android:layout_x="71dp"
+        android:layout_y="604dp"
+        android:backgroundTint="#FDEE72"
+        android:fontFamily="@font/quicksand_bold"
+        android:textAlignment="center"
+        android:textColor="#420000"
+        android:textColorHighlight="#420000"
+        android:textColorHint="#420000"
+        android:textColorLink="#420000"
+        android:textSize="35sp" />
+
+</AbsoluteLayout>

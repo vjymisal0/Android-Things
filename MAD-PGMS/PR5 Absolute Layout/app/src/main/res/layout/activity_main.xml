@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FF8B8B"
+    tools:context=".MainActivity"
+    tools:ignore="Deprecated">
+
+    <TextView
+        android:id="@+id/company1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_x="0dp"
+        android:layout_y="50dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="APPLE"
+        android:textAlignment="center"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_x="0dp"
+        android:layout_y="110dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="GOOGLE"
+        android:textAlignment="center"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_x="0dp"
+        android:layout_y="170dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="MICROSOFT"
+        android:textAlignment="center"
+        android:textSize="25dp" />
+</AbsoluteLayout>
