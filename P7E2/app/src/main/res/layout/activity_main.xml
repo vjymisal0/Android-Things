@@ -79,7 +79,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/contact"
         android:layout_marginTop="50dp"
-        android:onClick="displayData"
         android:text="Submit"
         android:textSize="18sp" />
+
 </RelativeLayout>

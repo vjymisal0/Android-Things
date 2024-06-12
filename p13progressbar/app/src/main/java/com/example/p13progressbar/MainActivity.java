@@ -28,9 +28,10 @@ public class MainActivity extends AppCompatActivity {
                 // Update the progress bar in the UI thread
                 handler.post(() -> {
                     progressBar.setProgress(progressStatus);
-                    t1.setText(progressBar.getProgress() + "%");
-
+//                    t1.setText(progressStatus + "/" + progressBar.getMax());
+                    t1.setText(progressStatus + "%");
                 });
+
                 try {
                     Thread.sleep(50);
                 } catch (InterruptedException e) {
