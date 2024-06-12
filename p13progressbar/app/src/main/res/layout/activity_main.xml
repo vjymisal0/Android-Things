@@ -6,23 +6,12 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/t1"
+    <Button
+        android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_x="172dp"
-        android:layout_y="318dp"
-        android:textSize="25dp" />
-
-    <ProgressBar
-        android:id="@+id/progressBar"
-        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-        android:layout_width="203dp"
-        android:layout_height="243dp"
-        android:layout_gravity="center"
-        android:layout_x="76dp"
-        android:layout_y="218dp"
-        android:indeterminateOnly="false" />
+        android:onClick="download"
+        android:text="DOWNLOAD FILE" />
 
 
 </AbsoluteLayout>
