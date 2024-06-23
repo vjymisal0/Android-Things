@@ -21,31 +21,23 @@ public class MainActivity extends AppCompatActivity {
 
     public void download(View view) {
         ProgressDialog progressBar = new ProgressDialog(this);
+        progressBar.setMessage("Downloading...");
         progressBar.setCancelable(true);
-        progressBar.setMessage("File Downloading...");
         progressBar.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
         progressBar.setProgress(0);
         progressBar.setMax(100);
         progressBar.show();
         new Thread(new Runnable() {
-            @Override
             public void run() {
-                while (progressBar.getProgress() < 100) {
-                    try {
-                        Thread.sleep(500);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
+                try {
+                    while (progressBar.getProgress() < progressBar.getMax()) {
+                        Thread.sleep(200);
+                        progressBar.incrementProgressBy(10);
                     }
-                    runOnUiThread(new Runnable() {
-                        @Override
-                        public void run() {
-                            progressBar.setProgress(progressBar.getProgress() + 10);
-                        }
-                    });
+                } catch (Exception e) {
+                    e.printStackTrace();
                 }
             }
         }).start();
-
-
     }
 }

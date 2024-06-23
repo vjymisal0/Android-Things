@@ -2,6 +2,9 @@ package com.vijayapps.p7e2;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.ContentValues;
+import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.os.Bundle;
 import android.view.View;
@@ -13,39 +16,53 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    EditText name, dob, city, email, contact;
-    Button submit;
+    private EditText etAdminName, etAdminEmail, etAdminPassword;
+    private Button btnRegister;
+    private SQLiteDatabase db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        name = findViewById(R.id.name);
-        dob = findViewById(R.id.dob);
-        city = findViewById(R.id.city);
-        email = findViewById(R.id.email);
-        contact = findViewById(R.id.contact);
-        submit = findViewById(R.id.btnSubmit);
+        etAdminName = findViewById(R.id.et_admin_name);
+        etAdminEmail = findViewById(R.id.et_admin_email);
+        etAdminPassword = findViewById(R.id.et_admin_password);
+        btnRegister = findViewById(R.id.btn_register);
 
-        submit.setOnClickListener(new View.OnClickListener() {
+        // Initialize database
+        HotelManagementDbHelper dbHelper = new HotelManagementDbHelper(this);
+        db = dbHelper.getWritableDatabase();
 
-            @Override
-            public void onClick(View v) {
+        btnRegister.setOnClickListener(v -> registerAdmin());
+    }
 
-                String n = name.getText().toString();
-                String d = dob.getText().toString();
-                String ci = city.getText().toString();
-                String e = email.getText().toString();
-                String c = contact.getText().toString();
+    private void registerAdmin() {
+        String name = etAdminName.getText().toString().trim();
+        String email = etAdminEmail.getText().toString().trim();
+        String password = etAdminPassword.getText().toString().trim();
 
-                if (n.isEmpty() || d.isEmpty() || ci.isEmpty() || e.isEmpty() || c.isEmpty()) {
-                    Toast.makeText(getApplicationContext(), "Please enter all data", Toast.LENGTH_SHORT).show();
-                } else {
-                    Toast.makeText(getApplicationContext(), n + "\n" + d + "\n" + ci + "\n" + e + "\n" + c, Toast.LENGTH_SHORT).show();
-                }
-            }
-        });
+        if (name.isEmpty() || email.isEmpty() || password.isEmpty()) {
+            Toast.makeText(this, "Please fill in all fields", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        ContentValues values = new ContentValues();
+        values.put("name", name);
+        values.put("email", email);
+        values.put("password", password);
+
+        long newRowId = db.insert("admins", null, values);
+
+        if (newRowId != -1) {
+            Toast.makeText(this, "Admin registered successfully", Toast.LENGTH_SHORT).show();
+            // Clear fields after successful registration
+            etAdminName.setText("");
+            etAdminEmail.setText("");
+            etAdminPassword.setText("");
+        } else {
+            Toast.makeText(this, "Registration failed", Toast.LENGTH_SHORT).show();
+        }
+        startActivity(new Intent(MainActivity.this, LoginActivity.class));
     }
 }
